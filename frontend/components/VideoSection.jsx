@@ -37,13 +37,13 @@ import {
                   position: 'absolute',
                   bottom: 1,
                   left: 0,
-                  bg: '#ff9999',
+                  bg: '#9B0016',
                   zIndex: -1,
                 }}>
                 How to rent
               </Text>
               <br />
-              <Text as={'span'} color={'#ff9999'}>
+              <Text as={'span'} color={'#607196'}>
               For property seekers and owners
               </Text>
             </Heading>
@@ -59,7 +59,7 @@ import {
                 fontWeight={'normal'}
                 px={6}
                 colorScheme={'red'}
-                bg={'#ff9999'}
+                bg={'#607196'}
                 _hover={{ bg: '#E88B8B' }}>
                 Learn more
               </Button>

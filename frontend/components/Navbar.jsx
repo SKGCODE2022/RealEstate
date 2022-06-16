@@ -4,7 +4,7 @@ import { FcMenu } from 'react-icons/fc';
 import { BsSearch } from 'react-icons/bs';
 import { FiKey } from 'react-icons/fi';
 import { BsFillHouseDoorFill, BsCashCoin, BsFillPersonFill } from "react-icons/bs";
-import logo from "../assets/images/logo_main_no_bg.png"
+import logo from "../assets/images/logogreen2.png"
 import Image from 'next/image'
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 import { useDisclosure } from '@chakra-ui/react';
@@ -21,9 +21,11 @@ export default function Navbar() {
   
   return (
   <Flex>
-    <Box fontSize='4xl' color='#ff9999' fontWeight='bold' fontStyle='italic'>
-      <Link href='/'>
-        <Image src={logo} alt="logo" />
+   <Box bg='white' w='100%' p={30} color='white' position='fixed' top='0' right='0' left='0'   >
+
+    <Box fontSize='4xl' color='#607196' fontWeight='bold' fontStyle='italic' position='fixed' top='0'  paddingTop='4px'>
+      <Link  href='/'>
+        <Image src={logo} alt="logo" height='30' width='200' />
       </Link>
     </Box>
     <Spacer />
@@ -33,37 +35,38 @@ export default function Navbar() {
       <option value='option2'>en</option>
     </Select>
     </Box> } */}
-    <Box p={7} paddingRight="4px">
+    <Box p={2} paddingRight="4px" position='fixed' right='4' top='0'>
       <Menu isOpen={isOpen}>
-        <MenuButton as={IconButton} icon={<BsFillPersonFill />} variant='outline' color='#ff9999' borderRadius={20} onMouseEnter={onOpen} onMouseLeave={onClose}/> 
+        <MenuButton as={IconButton} icon={<BsFillPersonFill />} variant='outline' color='#607196' borderRadius={20} onMouseEnter={onOpen} onMouseLeave={onClose}/> 
           <MenuList onMouseEnter={onOpen} onMouseLeave={onClose}>
           <Link href={`/login`} passHref>
-            <MenuItem>Login</MenuItem>
+            <MenuItem color='#607196'>Login</MenuItem>
           </Link>
           <Link href={`/register`} passHref>
-            <MenuItem>Register</MenuItem>
+            <MenuItem color='#607196'>Register</MenuItem>
           </Link>
           </MenuList>
       </Menu>
       &nbsp;
       &nbsp;
       <Menu isOpen={isOpenReportModal}>
-        <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='#ff9999' onMouseEnter={onOpenReportModal} onMouseLeave={onCloseReportModal} /> 
+        <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='#607196' onMouseEnter={onOpenReportModal} onMouseLeave={onCloseReportModal} /> 
         <MenuList onMouseEnter={onOpenReportModal} onMouseLeave={onCloseReportModal}>
           <Link href='/' passHref>
-            <MenuItem icon={<BsFillHouseDoorFill />}>Home</MenuItem>
+            <MenuItem color='#607196' icon={<BsFillHouseDoorFill color='#607196'/>}>Home</MenuItem>
           </Link>
           <Link href='search' passHref>
-            <MenuItem icon={<BsSearch />}>Search</MenuItem>
+            <MenuItem color='#607196' icon={<BsSearch color='#607196'/>}>Search</MenuItem>
           </Link>
           <Link href='search?purpose=for-sale' passHref>
-            <MenuItem icon={<BsCashCoin />}>Buy Property</MenuItem>
+            <MenuItem color='#607196' icon={<BsCashCoin color='#607196'/>}>Buy Property</MenuItem>
           </Link>
           <Link href='search?purpose=for-rent' passHref>
-            <MenuItem icon={<FiKey />}>Rent Property</MenuItem>
+            <MenuItem color='#607196' icon={<FiKey color='#607196'/>}>Rent Property</MenuItem>
           </Link>
         </MenuList>
       </Menu>
+    </Box>
     </Box>
   </Flex>
   )

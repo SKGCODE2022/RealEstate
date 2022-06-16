@@ -16,24 +16,30 @@ import {
     InputLeftElement,
     InputRightElement,
   } from "@chakra-ui/react"
+  import {useState, useEffect} from 'react'
 
 export default function SearchBar() {
+  const [formData, setFormData] = useState({        
+  location: '',
+})
+
+  const onChange = (e) => {setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}) )} 
+  const onSubmit = () => {}
     return (
-        <Center width='100%' h={400} backgroundImage="https://thodoris.eu/wp-content/uploads/2022/06/cropped-1.jpg">
-          <Box>
-{/*   https://www.periu.com/wp-content/uploads/2014/07/Real-State.jpg       
-     <Text align='center' fontSize='4xl' fontWeight='600' color='white' mb="9">Find your favorite place in the world</Text>*/}
+  
+        <Center width='100%' h={200} bg='#FEEBD6' p={0} color='white' >
+          <Box >
             <Flex>
             <FormControl id="email" >
             <InputGroup>
             
-                <Input type='location' placeholder=' e.g. Thessaloniki, Kalamaria' size="lg" marginRight={1}  bg='white' width={400} _placeholder={{ color: 'gray.400' }}/>
-                <Input type='location' placeholder='€ Min' marginRight={1} size="lg" bg='white' width={130} _placeholder={{ color: 'gray.400' }} />
-                <Input type='location' placeholder='€ Max' marginRight={1} size="lg" bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
-                <Input type='location' placeholder='m² Min' size="lg" marginRight={1} bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
-                <Input type='location' placeholder='m² Max' size="lg" marginRight={1} bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
+                <Input type='location' onChange={onChange} placeholder=' e.g. Thessaloniki, Kalamaria' color='#B2C581' size="lg" marginRight={1}  bg='white' width={400} _placeholder={{ color: 'gray.400' }}/>
+                <Input type='location' onChange={onChange} placeholder='€ Min' color='#B2C581' marginRight={1} size="lg" bg='white' width={130} _placeholder={{ color: 'gray.400' }} />
+                <Input type='location' onChange={onChange} placeholder='€ Max' color='#B2C581' marginRight={1} size="lg" bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
+                <Input type='location' onChange={onChange} placeholder='m² Min' color='#B2C581' size="lg" marginRight={1} bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
+                <Input type='location' onChange={onChange} placeholder='m² Max' color='#B2C581' size="lg" marginRight={1} bg='white' width={130} _placeholder={{ color: 'gray.400' }}/>
                 <Box paddingLeft={6}>
-                <Button size='lg' variant='outline' borderColor='#ffffff' backgroundColor="#ff8484" border='2px' color='#ffffff' _hover={{ bg: "#ff9999", color: " white" }} fontWeight='bold'>Search</Button>
+                <Button size='lg' variant='outline' borderColor='#ffffff' backgroundColor="#B2C581" border='2px' color='#ffffff' _hover={{ bg: "#DACA7C", color: " white" }} fontWeight='bold'>Search</Button>
                 </Box>
                 </InputGroup>
             </FormControl>

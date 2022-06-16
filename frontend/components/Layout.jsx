@@ -16,25 +16,26 @@ export default function Layout({ children }) {
       <Head>
         <title>Nowayhome</title>
       </Head>
-      <Box width='-moz-initial'>
-      <Box maxWidth='1400px' m='auto' >
-        <header>
-          <Navbar />
-          
-        </header>
-        </Box>
+      <Box width='-moz-initial' >
+        <Box h='60px' />
         <SearchBar />
         <Box maxWidth='1400px' m='auto'>
         <main>{children}</main>
         </Box>
-        <Divider orientation="horizontal" borderColor="#ff9999" borderWidth={10} width='-moz-initial'/>
+        <Divider orientation="horizontal" borderColor="#607196" borderWidth={10} width='-moz-initial'/>
         <VideoSection />
-        <Divider orientation="horizontal" borderColor="#ff9999" borderWidth={10} width='-moz-initial'/>
+        <Divider orientation="horizontal" borderColor="#607196" borderWidth={10} width='-moz-initial'/>
         <QuoteTest />
         <SocialSection />
         <footer>
           <Footer />
         </footer>
+        <Box maxWidth='1400px' m='auto' >
+        <header>
+          <Navbar />
+          
+        </header>
+        </Box>
       </Box>
     </>
   );

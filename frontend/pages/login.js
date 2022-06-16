@@ -21,13 +21,13 @@ import {FaUser} from 'react-icons/fa'
 
 export default function Login() {
         const [formData, setFormData] = useState({
-        name: '',
         email: '',
         password: '',
-        password2: ''
       })
-      const {name, email, password, password2} = formData
-      const onChange = () => {}
+      const {email, password} = formData
+      const onChange = (e) => {setFormData((prevState) => ({...prevState, [e.target.name]: e.target.value}) )} 
+      const onSubmit = () => {}
+  
     return (
         <Center width='100%' h={250} >
           <Box>
@@ -46,7 +46,7 @@ export default function Login() {
                 </Box>
                 </div>          
                 <Box paddingTop={3}>
-                <Button size='lg' variant='outline' borderColor='#ffffff' backgroundColor="#ff8484" border='2px' color='#ffffff' _hover={{ bg: "#ff9999", color: " white" }} fontWeight='bold'>Login</Button>
+                <Button size='lg' variant='outline' borderColor='#ffffff' backgroundColor="#ff8484" border='2px' color='#ffffff' _hover={{ bg: "#607196", color: " white" }} fontWeight='bold'>Login</Button>
                 </Box>
                 </form>
                 </InputGroup>

@@ -24,7 +24,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
         </Flex>
         <Flex alignItems='center' p='1' justifyContent='space-between' w='260px' >
           {rooms}
-          <FaBed  color='#ff9999' /> | {baths} <FaBath color='#ff9999' /> | {millify(area)} m2 <BsGridFill color='#ff9999' />
+          <FaBed  color='#607196' /> | {baths} <FaBath color='#607196' /> | {millify(area)} m2 <BsGridFill color='#607196' />
         </Flex>
         
       </Box>

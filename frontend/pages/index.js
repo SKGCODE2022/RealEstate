@@ -25,6 +25,8 @@ const Banner = ({purpose, title1, title2, desc1, desc2, buttonText, linkName, im
   </Flex>
 )
 
+
+
 const Search = ({ properties }) => {
   const [searchFiltersMin, setSearchFilters] = useState(false);
   const router = useRouter();
@@ -53,14 +55,14 @@ const Search = ({ properties }) => {
 
 const Home = ({ properties }) => (
   <Box paddingBottom={12}>
-      <Flex alignItems='center' justifyContent='center' paddingTop={20}>
-        {/* <Text fontFamily="verdana" color="gray.700" fontWeight='black' fontSize='3xl' fontStyle='italic'>Find your dream home</Text> */}
-        <Text fontFamily="verdana" color="gray.700" fontWeight='black' fontSize='5xl'  paddingLeft={2}>Find your dream home</Text>
+      <Flex alignItems='center' justifyContent='center' paddingTop={5}>
+        {/* <Text fontFamily="verdana" color="#FFBB33" fontWeight='black' fontSize='3xl' fontStyle='italic'>Find your dream home</Text> */}
+        <Text fontFamily="verdana" color="#2F2C23" fontWeight='black' fontSize='5xl'  paddingLeft={2}>Find your dream home</Text>
 
       </Flex>
-      <Flex alignItems='center' justifyContent='center' paddingBottom={10}>
+      <Flex alignItems='center' justifyContent='center' paddingBottom={2}>
       {/* <Text fontFamily="verdana" color="gray.700" fontWeight='black' fontSize='3xl' fontStyle='italic'>to build your brand new life</Text>*/}
-        <Text fontFamily="verdana" color="gray.700" fontWeight='black' fontSize='4xl' paddingLeft={2} >to build your brand new life</Text>
+        <Text fontFamily="verdana" color="#2F2C23" fontWeight='black' fontSize='4xl' paddingLeft={2} >Build your brand new life</Text>
 
       </Flex>
       &nbsp;
@@ -68,8 +70,8 @@ const Home = ({ properties }) => (
     <BuyRentSection />
     <br></br>
     <Flex p={2} paddingBottom={9} paddingTop={10}>
-      <Center height="40px">
-        <Divider orientation="vertical" borderColor="#ff9999" borderWidth={4} paddingTop={2}/>
+      <Center height="40px"  paddingLeft={4}  paddingTop={4}  >
+        <Divider orientation="vertical" borderColor="#607196" borderWidth={4} paddingTop={2}/>
       </Center>
       <Text fontFamily="verdana" color="gray.700" fontWeight='black' fontSize='4xl' paddingLeft={2}>Featured Listings</Text>
       <Text fontFamily="verdana" color="gray.700" fontSize='2xl' paddingLeft={4} paddingTop={2}>residential properties in your areas of interest</Text>
@@ -77,6 +79,8 @@ const Home = ({ properties }) => (
     { <Flex flexWrap='wrap' paddingLeft={12}>
       {properties.map((property) => <Property property={property} key={property._id} />)}
     </Flex> }
+
+    
   </Box>
 );
 

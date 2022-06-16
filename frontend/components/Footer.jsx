@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/layout';
 import Image from 'next/image';
-import logo from "../assets/images/logo_main_no_bg.png"
+import logo from "../assets/images/logogreen2.png"
 import { Grid, GridItem, Text, Center, Square, Circle } from '@chakra-ui/react';
 import {List, ListItem, UnorderedList} from '@chakra-ui/react';
 import { Link } from '@chakra-ui/react';
@@ -9,7 +9,7 @@ import { Link } from '@chakra-ui/react';
 const Footer = () => (
   <div>
    <Grid templateColumns='repeat(4, 1fr)' color="black" gap={0}  mt="8" borderColor='gray.100' paddingLeft={12} paddingBottom={8}>
-  <GridItem w='100%' p="6" paddingLeft={8}>
+  <GridItem w='100%' p="6" paddingLeft={8} paddingTop={'45px'} >
   <Image src={logo} alt="logo"/>  
   </GridItem>
   <GridItem w='100%' p="6">
